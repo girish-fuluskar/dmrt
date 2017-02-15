@@ -1,0 +1,29 @@
+<ion-modal-view>
+  <ion-header-bar class="pageheader">
+    <h1 class="title" style="color: #999;">Sign Up</h1>
+    <div class="buttons">
+      <span class="description" style="margin-right: 10px;" ng-click="closeSignUp()">Close</span>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doSignUp()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email Id</span>
+          <input type="text" ng-model="signupData.EmailId">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="signupData.password">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Employee ID</span>
+          <input type="text" ng-model="signupData.employeeId">
+        </label>
+        <label class="item btnStyle">
+          <button class="button-block" type="submit">Sign Up</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
