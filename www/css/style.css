@@ -867,6 +867,10 @@ canvas {
   background: #042c6d;
   position: relative;
 }
+.footer{
+  background: #042c6d;
+  color: #999;
+}
 .pageheader h2 {
   font-weight: 300;
   margin: 0;
