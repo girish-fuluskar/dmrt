@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view style="border:3px solid #042c6d; border-radius: 10px;">
   <ion-header-bar class="pageheader">
     <h1 class="title" style="color: #999;">Login</h1>
     <div class="buttons">
@@ -6,8 +6,9 @@
     </div>
   </ion-header-bar>
   <ion-content>
+    <div class="spacer" style="width: 20px; height: 50px;"></div>
     <form ng-submit="doLogin()">
-      <div class="list">
+      <div class="col col-30">
         <label class="item item-input">
           <span class="input-label">Username</span>
           <input type="text" ng-model="loginData.username">
@@ -16,10 +17,19 @@
           <span class="input-label">Password</span>
           <input type="password" ng-model="loginData.password">
         </label>
-        <label class="item btnStyle">
-          <button class="button-block" type="submit">Log in</button>
+        <div class="spacer" style="width: 20px; height: 20px;"></div>
+        <label class="btnStyle">
+          <button class="button-block" type="submit" ng-click="doLogin()">Log in</button>
         </label>
       </div>
     </form>
+    <div class="spacer" style="width: 20px; height: 20px;"></div>
+    <div class="col col-30">
+      <span class="block description" style="text-align: center;">Or</span>
+      <div class="spacer" style="width: 20px; height: 20px;"></div>
+      <label class="btnStyle">
+        <button class="button-block" type="submit" ng-click="signUp()">Sign Up</button>
+      </label>
+    </div>
   </ion-content>
 </ion-modal-view>

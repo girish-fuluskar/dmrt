@@ -1,4 +1,4 @@
-<ion-modal-view>
+<ion-modal-view style="border:3px solid #042c6d; border-radius: 10px;">
   <ion-header-bar class="pageheader">
     <h1 class="title" style="color: #999;">Sign Up</h1>
     <div class="buttons">
@@ -6,8 +6,9 @@
     </div>
   </ion-header-bar>
   <ion-content>
+    <div class="spacer" style="width: 20px; height: 50px;"></div>
     <form ng-submit="doSignUp()">
-      <div class="list">
+      <div class="col col-30">
         <label class="item item-input">
           <span class="input-label">Email Id</span>
           <input type="text" ng-model="signupData.EmailId">
@@ -20,7 +21,8 @@
           <span class="input-label">Employee ID</span>
           <input type="text" ng-model="signupData.employeeId">
         </label>
-        <label class="item btnStyle">
+        <div class="spacer" style="width: 20px; height: 20px;"></div>
+        <label class="btnStyle">
           <button class="button-block" type="submit">Sign Up</button>
         </label>
       </div>

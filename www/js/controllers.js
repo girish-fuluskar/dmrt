@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('HomeCtrl', function($scope, $ionicModal, $timeout){
+.controller('HomeCtrl', function($scope, $ionicModal, $timeout,$state){
   
   // Form data for the login modal
   $scope.loginData = {};
@@ -52,6 +52,7 @@ angular.module('starter.controllers', [])
 
   // Open the sign up modal
   $scope.signUp = function() {
+    $scope.closeLogin();
     $scope.modalSignUp.show();
   };
 
@@ -63,6 +64,7 @@ angular.module('starter.controllers', [])
     // code if using a login system
     $timeout(function() {
       $scope.closeLogin();
+      $state.go('app.playlists');
     }, 1000);
   };
 
