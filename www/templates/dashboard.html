@@ -1,0 +1,15 @@
+<ion-view hide-back-button="true">
+	<ion-nav-buttons side="secondary" style="float: right;">
+      <label class="label">
+        Welcome {{userName}}, <br>
+        From {{accName}}
+      </label>
+    </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope) {
+/*.controller('AppCtrl', function($scope) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -9,6 +9,41 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+  
+})*/
+
+.controller('AppCtrl', function($scope) {
+  $scope.groups = [];
+  $scope.menu = ['Account Administration', 'Contract Administration','Employee Administration', 'Asset Management', 'Allocation Management', 'Reports'];
+  $scope.subMenu = [['View Account','Location Administration'],['Search Contracts','Add Contracts','Location Administration','Project Administration'],[],['Search Assets','Add Asset']];
+  for (var i=0; i<$scope.menu.length; i++) {
+    $scope.groups[i] = {
+      name: $scope.menu[i],
+      items: []
+    };
+    //for (var j=i; j<$scope.subMenu.length; j++) {
+      if($scope.subMenu[i]){
+        for(var t=0; t<$scope.subMenu[i].length; t++){  
+          $scope.groups[i].items.push(' ' + $scope.subMenu[i][t]);
+        }
+      }
+    //}
+  }
+  
+  /*
+   * if given group is the selected group, deselect it
+   * else, select the given group
+   */
+  $scope.toggleGroup = function(group) {
+    if ($scope.isGroupShown(group)) {
+      $scope.shownGroup = null;
+    } else {
+      $scope.shownGroup = group;
+    }
+  };
+  $scope.isGroupShown = function(group) {
+    return $scope.shownGroup === group;
+  };
   
 })
 
@@ -64,7 +99,7 @@ angular.module('starter.controllers', [])
     // code if using a login system
     $timeout(function() {
       $scope.closeLogin();
-      $state.go('app.playlists');
+      $state.go('app.dashboard');
     }, 1000);
   };
 
@@ -81,7 +116,11 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('dashboardCtrl', function($scope) {
+
+  $scope.userName = "Girish";
+  $scope.accName = "BARCA";
+
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },

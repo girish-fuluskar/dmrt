@@ -1,6 +1,7 @@
 /* Empty. Add your own CSS if you like */
 .navbar_height{
   height: 100px !important;
+  background-color: #042c6d !important;
 }
 
 .header_font{
