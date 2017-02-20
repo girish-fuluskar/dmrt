@@ -1,15 +1,27 @@
 <ion-view hide-back-button="true">
 	<ion-nav-buttons side="secondary" style="float: right;">
       <label class="label">
-        Welcome {{userName}}, <br>
-        From {{accName}}
+        Welcome {{userName}} <br>
+        From {{accName}}, <br> {{projName}}
       </label>
     </ion-nav-buttons>
   <ion-content>
-    <ion-list>
+    <!-- <ion-list>
       <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
         {{playlist.title}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
+    <div class="spacer" style="width: 250px; height: 20vh;"></div>
+    <div style="border:5px solid lightgrey; border-radius: 10px;margin-right: 30px;margin-left: 30px;">
+      <label class="item item-input">
+        <h1><b>0 notifications</b></h1>
+      </label>
+    </div>
+    <div class="spacer" style="width: 250px; height: 5vh;"></div>
+    <div style="border:5px solid lightgrey; border-radius: 10px;margin-right: 30px;margin-left: 30px;">
+      <label class="item item-input">
+        <h1><b>0 deliquency and pending</b></h1>
+      </label>
+    </div>
   </ion-content>
 </ion-view>

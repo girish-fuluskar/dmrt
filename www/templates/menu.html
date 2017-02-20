@@ -13,22 +13,82 @@
   </ion-side-menu-content>
 
   <ion-side-menu side="left"  style="border-right: 3px solid; border-radius: 0 0 50px 0;">
-    <ion-header-bar style="font-weight: 500;">
+    <!-- <ion-header-bar style="font-weight: 500;">
       <h1 style="font-weight: 400;">Menu</h1>
-    </ion-header-bar>
+    </ion-header-bar> -->
     <ion-content style="background-color: #cccccc;">
-      <div class="spacer" style="width: 20px; height: 8vh;"></div>
+      <div class="spacer" style="width: 20px; height: 14vh;"></div>
       <ion-list>
         <ion-item class="assertive" style="border-bottom: 3px solid;border-radius: 0 0 20px 0;">
           <i class="icon"></i><span style="font-weight: 600;">Logout</span>
         </ion-item>
-        <div ng-repeat="group in groups">
+        <!-- <div ng-repeat="group in groups">
           <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
               <i class="icon" ng-class="isGroupShown(group) ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
               {{group.name}}
           </ion-item>
           <ion-item class="item-accordion" ng-repeat="item in group.items" ng-show="isGroupShown(group)">
             <span class="ion-android-remove" style="align-self: center;">{{item}}</span>
+          </ion-item>
+        </div> -->
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Account Administration')" ng-class="{active: isGroupShown('Account Administration')}">
+            <i class="icon" ng-class="isGroupShown('Account Administration') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Account Administration
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Account Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> View Account</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Account Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> Location Administration</span>
+          </ion-item>
+        </div>
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Contract Administration')" ng-class="{active: isGroupShown('Contract Administration')}">
+            <i class="icon" ng-class="isGroupShown('Contract Administration') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Contract Administration
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Contract Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> Search Contracts</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Contract Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> Add Contracts</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Contract Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> Location Administration</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Contract Administration')">
+            <span class="ion-android-remove" style="align-self: center;"> Project Administration</span>
+          </ion-item>
+        </div>
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Employee Administration')" ng-class="{active: isGroupShown('Employee Administration')}">
+            <i class="icon" ng-class="isGroupShown('Employee Administration') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Employee Administration
+          </ion-item>
+        </div>
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Asset Management')" ng-class="{active: isGroupShown('Asset Management')}">
+            <i class="icon" ng-class="isGroupShown('Asset Management') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Asset Management
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Asset Management')">
+            <span class="ion-android-remove" style="align-self: center;"> Search Assets</span>
+          </ion-item>
+          <ion-item class="item-accordion" ng-show="isGroupShown('Asset Management')">
+            <span class="ion-android-remove" style="align-self: center;"> Add Asset</span>
+          </ion-item>
+        </div>
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Allocation Management')" ng-class="{active: isGroupShown('Allocation Management')}">
+            <i class="icon" ng-class="isGroupShown('Allocation Management') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Allocation Management
+          </ion-item>
+        </div>
+        <div>
+          <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup('Reports')" ng-class="{active: isGroupShown('Reports')}">
+            <i class="icon" ng-class="isGroupShown('Reports') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
+              Reports
           </ion-item>
         </div>
       </ion-list>

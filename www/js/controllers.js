@@ -13,7 +13,11 @@ angular.module('starter.controllers', [])
 })*/
 
 .controller('AppCtrl', function($scope) {
-  $scope.groups = [];
+
+  //Implemented following menu on HTML
+  //----------------------------------
+
+  /*$scope.groups = [];
   $scope.menu = ['Account Administration', 'Contract Administration','Employee Administration', 'Asset Management', 'Allocation Management', 'Reports'];
   $scope.subMenu = [['View Account','Location Administration'],['Search Contracts','Add Contracts','Location Administration','Project Administration'],[],['Search Assets','Add Asset']];
   for (var i=0; i<$scope.menu.length; i++) {
@@ -28,7 +32,7 @@ angular.module('starter.controllers', [])
         }
       }
     //}
-  }
+  }*/
   
   /*
    * if given group is the selected group, deselect it
@@ -120,6 +124,7 @@ angular.module('starter.controllers', [])
 
   $scope.userName = "Girish";
   $scope.accName = "BARCA";
+  $scope.projName = "Non-plastic Dispute";
 
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
