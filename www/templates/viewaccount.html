@@ -1,0 +1,43 @@
+<ion-view hide-back-button="true">
+	<div class="spacer" style="width: 250px; height: 20vh;"></div>
+	<div style="border: 5px solid #042c6d; margin-right: 30px; margin-left: 30px;">
+		<div class="col col-30">
+			<label class="item item-input" style="border: 0px;">
+	          <span class="input-label">Account Id</span>
+	          <span class="input-label"><b>{{accId}}</b></span>
+	        </label>
+	        <label class="item item-input" style="border: 0px;">
+	          <span class="input-label">Account Name</span>
+	          <span class="input-label"><b>{{accName}}</b></span>
+	        </label>
+	        <label class="item item-input" style="border: 0px;">
+	          <span class="input-label">Client Name</span>
+	          <span class="input-label"><b>{{clientName}}</b></span>
+	        </label>
+	        <label class="item item-input" style="border: 0px;">
+	          <span class="input-label">Engagement Start Date</span>
+	          <span class="input-label"><b>{{engeStartDt}}</b></span>
+	        </label>
+	        <div class="spacer" style="width: 250px; height: 5vh;"></div>
+	        <div style="border: 3px solid #042c6d;">
+	        	<label class="item item-input" style="border-bottom: 3px solid #042c6d;">
+		          <span class="input-label">Work Locations</span>
+		        </label>
+		        <ion-list>
+			        <ion-item menu-close ng-click="login()">
+			          Login
+			        </ion-item>
+			        <ion-item menu-close href="#/app/search">
+			          Search
+			        </ion-item>
+			        <ion-item menu-close href="#/app/browse">
+			          Browse
+			        </ion-item>
+			        <ion-item menu-close href="#/app/playlists">
+			          Playlists
+			        </ion-item>
+		      	</ion-list>
+			</div>
+		</div>
+	</div>
+</ion-view>

@@ -8,6 +8,12 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+      <ion-nav-buttons side="secondary" style="float: right;">
+        <label class="label">
+          Welcome {{userName}} <br>
+          From {{accName}}, <br> {{projName}}
+        </label>
+    </ion-nav-buttons>
     </ion-nav-bar>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
@@ -20,7 +26,7 @@
       <div class="spacer" style="width: 20px; height: 14vh;"></div>
       <ion-list>
         <ion-item class="assertive" style="border-bottom: 3px solid;border-radius: 0 0 20px 0;">
-          <i class="icon"></i><span style="font-weight: 600;">Logout</span>
+          <i class="icon"></i><span style="font-weight: 600;" ng-click="logout()">Logout</span>
         </ion-item>
         <!-- <div ng-repeat="group in groups">
           <ion-item style="border-bottom: 3px solid;border-radius: 0 0 20px 0;" class="item-stable" ng-click="toggleGroup(group)" ng-class="{active: isGroupShown(group)}">
@@ -36,7 +42,7 @@
             <i class="icon" ng-class="isGroupShown('Account Administration') ? 'ion-android-arrow-dropdown-circle' : 'ion-android-arrow-dropright-circle'"></i>
               Account Administration
           </ion-item>
-          <ion-item class="item-accordion" ng-show="isGroupShown('Account Administration')">
+          <ion-item class="item-accordion" ng-show="isGroupShown('Account Administration')" menu-close ng-click="goViewAccount()">
             <span class="ion-android-remove" style="align-self: center;"> View Account</span>
           </ion-item>
           <ion-item class="item-accordion" ng-show="isGroupShown('Account Administration')">

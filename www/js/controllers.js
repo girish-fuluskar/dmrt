@@ -12,7 +12,11 @@ angular.module('starter.controllers', [])
   
 })*/
 
-.controller('AppCtrl', function($scope) {
+.controller('AppCtrl', function($scope, $state) {
+
+  $scope.userName = "Girish";
+  $scope.accName = "BARCA";
+  $scope.projName = "Non-plastic Dispute";
 
   //Implemented following menu on HTML
   //----------------------------------
@@ -48,6 +52,21 @@ angular.module('starter.controllers', [])
   $scope.isGroupShown = function(group) {
     return $scope.shownGroup === group;
   };
+
+  //logout function
+  $scope.logout = function(){
+   
+    //$ionicSideMenuDelegate.toggleLeft();
+   
+
+    $state.go('home');
+    console.log("logging out...");
+  }
+
+  $scope.goViewAccount = function(){
+    //$ionicSideMenuDelegate.toggleLeft();
+    $state.go('app.viewaccount');
+  }
   
 })
 
@@ -120,11 +139,18 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('viewAccountCtrl', function($scope){
+    $scope.accId = "BARCA";
+    $scope.accName= "BARCLAYS";
+    $scope.clientName = "Barclays Bank Plc";
+    $scope.engeStartDt = "01-Jan-2010";
+})
+
 .controller('dashboardCtrl', function($scope) {
 
-  $scope.userName = "Girish";
+/*  $scope.userName = "Girish";
   $scope.accName = "BARCA";
-  $scope.projName = "Non-plastic Dispute";
+  $scope.projName = "Non-plastic Dispute";*/
 
   $scope.playlists = [
     { title: 'Reggae', id: 1 },

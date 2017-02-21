@@ -31,7 +31,38 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-
+  .state('home',{
+    url: '/home',
+    templateUrl:'templates/home.html',
+    controller: 'HomeCtrl'
+  })
+  
+  .state('app.browse', {
+    url: '/browse',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/browse.html'
+      }
+    }
+  })
+  .state('app.dashboard', {
+    url: '/dashboard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/dashboard.html',
+        controller: 'dashboardCtrl'
+      }
+    }
+  })
+  .state('app.viewaccount',{
+    url: '/viewaccount',
+    views:{
+      'menuContent': {
+        templateUrl:'templates/viewaccount.html',
+        controller: 'viewAccountCtrl'
+      }
+    }
+  })
   .state('app.search', {
     url: '/search',
     views: {
@@ -40,31 +71,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
-  .state('home',{
-    url: '/home',
-    templateUrl:'templates/home.html',
-    controller: 'HomeCtrl'
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.dashboard', {
-      url: '/dashboard',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/dashboard.html',
-          controller: 'dashboardCtrl'
-        }
-      }
-    })
-
   .state('app.single', {
     url: '/dashboard/:playlistId',
     views: {
